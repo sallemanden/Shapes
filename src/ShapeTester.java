@@ -7,5 +7,7 @@ public class ShapeTester {
         c.CalcArea();
         c.CalcPerimeter();
         c.showShape();
+
+        c.CircleCenter(-1, -2,7,4);
     }
 }
