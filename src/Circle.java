@@ -5,7 +5,7 @@ public class Circle extends Shape
 {
     double radius;
     // Create points
-    private Point point;
+    private Point point1;
     private Point point2;
 
     public Circle()
@@ -14,7 +14,7 @@ public class Circle extends Shape
         radius = 0;
 
         // Create object Point
-        point = new Point(0,0);
+        point1 = new Point(0,0);
         point2 = new Point(0,0);
 
     }
@@ -26,7 +26,7 @@ public class Circle extends Shape
     }
 
     public void CircleCenter(int x1, int y1, int x2, int y2){
-        point = new Point(x1,y1);
+        point1 = new Point(x1,y1);
         point2 = new Point(x2,y2);
 
         System.out.println("The center point is: " + (float)(x1 + x2) / 2 + ", " + (float)(y1 + y2) / 2);
