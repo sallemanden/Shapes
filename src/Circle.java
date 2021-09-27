@@ -29,7 +29,7 @@ public class Circle extends Shape
         point = new Point(x1,y1);
         point2 = new Point(x2,y2);
 
-        System.out.println((float)(x1 + x2) / 2 + ", " + (float)(y1 + y2) / 2);
+        System.out.println("The center point is: " + (float)(x1 + x2) / 2 + ", " + (float)(y1 + y2) / 2);
     }
     public void CalcArea()
     {
