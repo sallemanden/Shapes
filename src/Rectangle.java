@@ -3,7 +3,7 @@ import java.awt.*;
 public class Rectangle extends Shape {
 
     double width,length;
-    java.awt.Rectangle Square = new java.awt.Rectangle(0,0, 300, 600);
+    java.awt.Rectangle Square = new java.awt.Rectangle(0,0, 10, 10);
 
 public Rectangle(){
 
@@ -36,7 +36,21 @@ public void calcPerimeter(){
 public static Point rectCenter(java.awt.Rectangle Square){
 int x = Square.x + Square.width / 2;
 int y = Square.y + Square.height / 2;
+
 return new Point (x, y);
+}
+
+public void findCenter(){
+
+    int rx = rectCenter(Square).x;
+    int ry = rectCenter(Square).y;
+
+    System.out.println("Rectangle Center point:");
+    System.out.println("X: " + rx);
+    System.out.println("Y: " + ry);
+
+    centerRectX = rx;
+    centerRectY = ry;
 }
 
 }

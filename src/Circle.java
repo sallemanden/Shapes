@@ -13,8 +13,8 @@ public class Circle extends Shape
         radius = 0;
 
         // Create object Point
-        point1 = new Point(0,0);
-        point2 = new Point(0,0);
+        point1 = new Point(1,1);
+        point2 = new Point(1,1);
 
     }
 
@@ -25,10 +25,19 @@ public class Circle extends Shape
     }
 
     public void circleCenter(int x1, int y1, int x2, int y2){
-        point1 = new Point(x1,y1);
-        point2 = new Point(x2,y2);
+        int cx = (x1 + x2) / 2;
+        int cy = (y1 + y2) / 2;
 
-        System.out.println("The center point is: " + (float)(x1 + x2) / 2 + ", " + (float)(y1 + y2) / 2);
+        System.out.println("The center point of the circle is...");
+        System.out.println("X: " + cx);
+        System.out.println("Y: " + cy);
+
+        centerCircleX = cx;
+        centerCircleY = cy;
+
+
+
+
     }
     public void calcArea()
     {

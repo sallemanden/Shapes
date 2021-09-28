@@ -14,6 +14,6 @@ public class CircleTester {
         c.showShape();
 
         // Print out the center point of Shape
-        c.circleCenter(-8, -2,2,9);
+        c.circleCenter(1, 1,1,1);
     }
 }
