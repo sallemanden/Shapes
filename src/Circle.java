@@ -5,8 +5,7 @@ public class Circle extends Shape
 {
     double radius;
     // Create points
-    private Point point1;
-    private Point point2;
+    private Point point1, point2;
 
     public Circle()
     {
