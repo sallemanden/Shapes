@@ -2,31 +2,31 @@ import java.awt.*;
 
 public class Triangle extends Shape{
 
-    double width, length;
-    double cathetusA = length;
-    double cathetusB = width;
+    double sideA, sideB, sideC;
 
     public Triangle(){
 
         name = "Triangle";
-        width = 0;
-        length = 0;
+        sideA = 0;
+        sideB = 0;
 
     }
 
     public Triangle(double triWidth, double triLength){
 
         name = "Triangle";
-        width = triWidth;
-        length = triLength;
+        sideA = triWidth;
+        sideB = triLength;
     }
 
     public void calcArea(){
 
-        area = width * length / 2;
+        area = sideA * sideB / 2;
     }
 
     public void calcPerimeter(){
+            sideC = Math.sqrt(sideA * sideA + sideB * sideB);
 
+            perimeter = sideA + sideB + sideC;
     }
 }
