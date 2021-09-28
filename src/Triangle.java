@@ -16,7 +16,7 @@ public class Triangle extends Shape{
 
     public Triangle(double triWidth, double triLength){
 
-        name = "Rectangle";
+        name = "Triangle";
         width = triWidth;
         length = triLength;
     }
