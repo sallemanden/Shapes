@@ -24,18 +24,18 @@ public class Circle extends Shape
         radius = radius2;
     }
 
-    public void CircleCenter(int x1, int y1, int x2, int y2){
+    public void circleCenter(int x1, int y1, int x2, int y2){
         point1 = new Point(x1,y1);
         point2 = new Point(x2,y2);
 
         System.out.println("The center point is: " + (float)(x1 + x2) / 2 + ", " + (float)(y1 + y2) / 2);
     }
-    public void CalcArea()
+    public void calcArea()
     {
         area = Math.PI * radius * radius;
     }
 
-    public void CalcPerimeter()
+    public void calcPerimeter()
     {
         perimeter = 2 * Math.PI * radius;
     }
