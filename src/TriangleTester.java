@@ -7,5 +7,6 @@ public class TriangleTester {
         t.calcArea();
 
         t.calcPerimeter();
+
     }
 }
