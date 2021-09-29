@@ -22,6 +22,7 @@ public class Triangle extends Shape {
         System.out.println("Side AB: " + sideAB);
         System.out.println("Side BC: " + sideBC);
         System.out.println("Side CA: " + sideCA);
+
         double d = (sideAB + sideBC + sideCA) / 3;
         System.out.println(d);
 
