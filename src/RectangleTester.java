@@ -17,9 +17,5 @@ public class RectangleTester extends Shape {
 
         // Print out the center point of Shape
         r.findCenter();
-
-
-
-        s.calcDistance(c.centerCircleX, c.centerCircleY, r.centerRectX, r.centerRectY);
     }
 }
