@@ -1,32 +1,41 @@
 import java.awt.*;
 
-public class Triangle extends Shape{
+public class Triangle extends Shape {
 
-    double sideA, sideB, sideC;
+    double sideAB, sideBC, sideCA;
+    int[] x = {50, 50, 100};
+    int[] y = {0, 100, 0};
+    java.awt.Polygon Triangle = new java.awt.Polygon(x, y, 3);
 
-    public Triangle(){
+    public Triangle() {
 
         name = "Triangle";
-        sideA = 0;
-        sideB = 0;
+        sideAB = 0;
+        sideBC = 0;
+        sideCA = 0;
+    }
+
+    public void calcDistance(int x1, int y1, int x2, int y2, int x3, int y3) {
+        sideAB = Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+        sideBC = Math.sqrt((x3 - x2) * (x3 - x2) + (y3 - y2) * (y3 - y2));
+        sideCA = Math.sqrt((x1 - x3) * (x1 - x3) + (y1 - y3) * (y1 - y3));
+        System.out.println("Side AB: " + sideAB);
+        System.out.println("Side BC: " + sideBC);
+        System.out.println("Side CA: " + sideCA);
+        double d = (sideAB + sideBC + sideCA) / 3;
+        System.out.println(d);
 
     }
 
-    public Triangle(double triWidth, double triLength){
+    public void calcArea() {
 
-        name = "Triangle";
-        sideA = triWidth;
-        sideB = triLength;
-    }
-
-    public void calcArea(){
-
-        area = sideA * sideB / 2;
+        area = sideAB * sideCA / 2;
+        System.out.println(area);
     }
 
     public void calcPerimeter(){
-            sideC = Math.sqrt(sideA * sideA + sideB * sideB);
 
-            perimeter = sideA + sideB + sideC;
+        perimeter = sideAB + sideBC + sideCA;
+        System.out.println(perimeter);
     }
 }
