@@ -3,13 +3,12 @@ public class TriangleTester {
         Triangle t = new Triangle();
 
         //calculates the distance between the three points giving the sides of the triangle
-        t.calcDistance(50, 0,50,100,100, 0);
-
-        //calculate the area of the triangle
-        t.calcArea();
+        t.calcDistance(89, 0,67,100,100, 0);
 
         //calculate the perimeter of the triangle
         t.calcPerimeter();
 
+        //calculate the area of the triangle
+        t.calcArea();
     }
 }

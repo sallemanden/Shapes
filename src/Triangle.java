@@ -27,19 +27,20 @@ public class Triangle extends Shape {
 
         //calculates the average distance between the three points
         double d = (sideAB + sideBC + sideCA) / 3;
-        System.out.println(d);
+        System.out.println("Average distance: " + d);
 
-    }
-
-    public void calcArea() {
-
-        area = sideAB * sideCA / 2;
-        System.out.println(area);
     }
 
     public void calcPerimeter(){
 
         perimeter = sideAB + sideBC + sideCA;
-        System.out.println(perimeter);
+        System.out.println("Perimeter: " + perimeter);
+    }
+
+    public void calcArea() {
+
+        double s = perimeter/2;
+        area = Math.sqrt(s * (s-sideAB) * (s - sideBC) * (s-sideCA));
+        System.out.println("Area: " + area);
     }
 }
