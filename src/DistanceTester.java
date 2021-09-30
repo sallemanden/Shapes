@@ -5,12 +5,8 @@ public class DistanceTester extends Shape {
         Rectangle r = new Rectangle();
         Shape s = new Shape();
 
-        c.circleCenter(0,0,5,5);
+        c.centerOfTwoPoints(0,0,10,23);
         r.findCenter();
         s.calcDistance(c.getX(), c.getY(), r.getX(),r.getY());
-
-
-
-
     }
 }

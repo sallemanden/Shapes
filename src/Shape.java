@@ -2,7 +2,7 @@ public class Shape {
     // Variables
     String name;
     double perimeter, area;
-     int centerCircleX, centerCircleY, centerRectX, centerRectY;
+     int centerX, centerY;
 
     public Shape()
     {

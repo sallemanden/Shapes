@@ -42,23 +42,21 @@ return new Point (x, y);
 
 public void findCenter(){
 
-    int rx = rectCenter(Square).x;
-    int ry = rectCenter(Square).y;
+    centerX = rectCenter(Square).x;
+    centerY = rectCenter(Square).y;
 
     System.out.println("Rectangle Center point:");
-    System.out.println("X: " + rx);
-    System.out.println("Y: " + ry);
+    System.out.println("X: " + centerX);
+    System.out.println("Y: " + centerY);
 
-    centerRectX = rx;
-    centerRectY = ry;
 }
 
 public int getX(){
-    return centerRectX;
+    return centerX;
 }
 
 public int getY(){
-    return centerRectY;
+    return centerY;
 }
 
 }

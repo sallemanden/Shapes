@@ -3,33 +3,33 @@ import java.awt.*;
 
 public class Circle extends Shape
 {
-    int centerX;
-    int centerY;
     double radius;
 
     public Circle()
     {
         name = "Circle";
         radius = 0;
+        centerX = 0;
+        centerY = 0;
     }
 
-    public Circle(double radius2)
+    public Circle(double radius2, int x, int y)
     {
         name = "Circle";
         radius = radius2;
+        centerX = x;
+        centerY = y;
 
     }
 
-    public void circleCenter(int x1, int y1, int x2, int y2){
-        int cx = (x1 + x2) / 2;
-        int cy = (y1 + y2) / 2;
-        centerX = cx;
-        centerY = cy;
+    // If we have two points and want to calculate the center point
+    public void centerOfTwoPoints(int x1, int y1, int x2, int y2){
+        centerX = (x1 + x2) / 2;
+        centerY = (y1 + y2) / 2;
 
-        System.out.println("The center point of the circle is...");
+        System.out.println("The center point of the two points is...");
         System.out.println("X: " + centerX);
         System.out.println("Y: " + centerY);
-
     }
 
     public int getX(){
