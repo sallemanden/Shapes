@@ -1,6 +1,3 @@
-import java.awt.*;
-
-
 public class Circle extends Shape
 {
     double radius;
@@ -36,18 +33,24 @@ public class Circle extends Shape
         return centerX;
     }
 
+    public void setX(int x){ this.centerX = x;}
+
     public int getY(){
         return centerY;
     }
 
-    public void calcArea()
+    public void setY(int y){ this.centerY = y;}
+
+    public double calcArea(double radius)
     {
         area = Math.PI * radius * radius;
+        return area;
     }
 
-    public void calcPerimeter()
+    public double calcPerimeter(double radius)
     {
         perimeter = 2 * Math.PI * radius;
+        return perimeter;
     }
 
 
