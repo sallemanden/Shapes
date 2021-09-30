@@ -1,9 +1,7 @@
-import java.awt.*;
-
 public class Triangle extends Shape {
 
     double sideAB, sideBC, sideCA;
-    int[] x = {50, 50, 100};
+    int[] x = {0, 50, 100};
     int[] y = {0, 100, 0};
     java.awt.Polygon Triangle = new java.awt.Polygon(x, y, 3);
 
@@ -42,5 +40,20 @@ public class Triangle extends Shape {
         double s = perimeter/2;
         area = Math.sqrt(s * (s-sideAB) * (s - sideBC) * (s-sideCA));
         System.out.println("Area: " + area);
+    }
+
+    //calculate total area to help calculate if point is inside triangle
+    public int areaTest(int x1, int y1, int x2, int y2, int x3, int y3){
+        return Math.abs((x1 *(y2-y3) + x2 * (y3-y1) + x3 * (y1-y2))/2);
+    }
+
+    //calculate point areas to check if point is inside
+    public boolean findPoint(int x1, int y1, int x2, int y2, int x3, int y3, int x, int y){
+    double pointArea = areaTest(x1,y1,x2,y2,x3,y3);
+    double pointArea1 = areaTest(x,y,x2,y2,x3,y3);
+    double pointArea2 = areaTest(x1,y1,x,y,x3,y3);
+    double pointArea3 = areaTest(x1,y1,x2,y2,x,y);
+
+    return (pointArea == pointArea1 + pointArea2 + pointArea3);
     }
 }
