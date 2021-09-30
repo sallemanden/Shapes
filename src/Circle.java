@@ -1,43 +1,56 @@
-import java.awt.*;
-
-
 public class Circle extends Shape
 {
     double radius;
-    // Create points
-    private Point point1, point2;
 
     public Circle()
     {
         name = "Circle";
         radius = 0;
-
-        // Create object Point
-        point1 = new Point(0,0);
-        point2 = new Point(0,0);
-
+        centerX = 0;
+        centerY = 0;
     }
 
-    public Circle(double radius2)
+    public Circle(double radius2, int x, int y)
     {
         name = "Circle";
         radius = radius2;
+        centerX = x;
+        centerY = y;
+
     }
 
-    public void circleCenter(int x1, int y1, int x2, int y2){
-        point1 = new Point(x1,y1);
-        point2 = new Point(x2,y2);
+    // If we have two points and want to calculate the center point
+    public void centerOfTwoPoints(int x1, int y1, int x2, int y2){
+        centerX = (x1 + x2) / 2;
+        centerY = (y1 + y2) / 2;
 
-        System.out.println("The center point is: " + (float)(x1 + x2) / 2 + ", " + (float)(y1 + y2) / 2);
+        System.out.println("The center point of the two points is...");
+        System.out.println("X: " + centerX);
+        System.out.println("Y: " + centerY);
     }
-    public void calcArea()
+
+    public int getX(){
+        return centerX;
+    }
+
+    public void setX(int x){ this.centerX = x;}
+
+    public int getY(){
+        return centerY;
+    }
+
+    public void setY(int y){ this.centerY = y;}
+
+    public double calcArea(double radius)
     {
         area = Math.PI * radius * radius;
+        return area;
     }
 
-    public void calcPerimeter()
+    public double calcPerimeter(double radius)
     {
         perimeter = 2 * Math.PI * radius;
+        return perimeter;
     }
 
 
