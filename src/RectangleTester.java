@@ -3,8 +3,6 @@ public class RectangleTester extends Shape {
     {
         // Testing Circle
         Rectangle r = new Rectangle(100,200);
-        Circle c = new Circle(5);
-        Shape s = new Shape();
 
         // Calculate area of Rectangle
         r.calcArea();

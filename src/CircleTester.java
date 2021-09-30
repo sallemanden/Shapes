@@ -2,7 +2,7 @@ public class CircleTester {
     public static void main(String[] args)
     {
         // Testing Circle
-        Circle c = new Circle(7.0);
+        Circle c = new Circle(10);
 
         // Calculate area of Circle
         c.calcArea();

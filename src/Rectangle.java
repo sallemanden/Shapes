@@ -53,4 +53,12 @@ public void findCenter(){
     centerRectY = ry;
 }
 
+public int getX(){
+    return centerRectX;
+}
+
+public int getY(){
+    return centerRectY;
+}
+
 }

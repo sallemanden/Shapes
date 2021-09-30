@@ -25,7 +25,7 @@ public class Shape {
         System.out.println(" ");
         System.out.println("X2: " + x2);
         System.out.println("Y2: " + y2);
-        System.out.println(distance);
+        System.out.println("Distance: " + distance);
     }
 }
 
