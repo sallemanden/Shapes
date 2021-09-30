@@ -53,6 +53,8 @@ public class Circle extends Shape
         return perimeter;
     }
 
-
+    public boolean findPoint(int centerX, int centerY, int x, int y, double radius){
+        return (x - centerX) * (x - centerX) + (y - centerY) * (y - centerY) <= radius * radius;
+    }
 
 }
