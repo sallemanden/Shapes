@@ -1,9 +1,6 @@
 public class Triangle extends Shape {
 
     double sideAB, sideBC, sideCA;
-    int[] x = {0, 50, 100};
-    int[] y = {0, 100, 0};
-    java.awt.Polygon Triangle = new java.awt.Polygon(x, y, 3);
 
     public Triangle() {
 
@@ -13,7 +10,7 @@ public class Triangle extends Shape {
         sideCA = 0;
     }
 
-    public void calcDistance(int x1, int y1, int x2, int y2, int x3, int y3) {
+    public double calcDistance(int x1, int y1, int x2, int y2, int x3, int y3) {
 
         //calculate distance between the three points giving the sides of the triangle
         sideAB = Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
@@ -26,13 +23,15 @@ public class Triangle extends Shape {
         //calculates the average distance between the three points
         double d = (sideAB + sideBC + sideCA) / 3;
         System.out.println("Average distance: " + d);
+        return d;
 
     }
 
-    public void calcPerimeter(){
+    public double calcPerimeter(double sideAB, double sideBC, double sideCA){
 
         perimeter = sideAB + sideBC + sideCA;
         System.out.println("Perimeter: " + perimeter);
+        return perimeter;
     }
 
     public void calcArea() {

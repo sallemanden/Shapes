@@ -40,8 +40,18 @@ class CircleTest extends Shape {
     @Test
     void calcPerimeter() {
         Circle c = new Circle (60, 180, 300);
-        c.calcPerimeter(14);
         assertEquals(87, c.calcPerimeter(14), 1);
+    }
+
+    @Test
+    void findPoint() {
+        Circle c = new Circle(60, 0, 0);
+        assertEquals(true, c.findPoint(c.centerX, c.centerY, 40, 40, c.radius));
+    }
+
+    void findPointFalse() {
+        Circle c = new Circle(120, 0, 0);
+        assertEquals(false, c.findPoint(c.centerX, c.centerY, 130, 40, c.radius));
     }
 
 

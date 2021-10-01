@@ -6,7 +6,7 @@ public class TriangleTester {
         t.calcDistance(0, 0,50,100,100, 0);
 
         //calculate the perimeter of the triangle
-        t.calcPerimeter();
+        t.calcPerimeter(t.sideAB, t.sideBC, t.sideCA);
 
         //calculate the area of the triangle
         t.calcArea();

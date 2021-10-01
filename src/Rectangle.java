@@ -20,15 +20,17 @@ public class Rectangle extends Shape {
         length = rectLength;
     }
 
-    public void calcArea(){
+    public double calcArea(double width, double length){
 
         area = width * length;
+        return area;
 
     }
 
-    public void calcPerimeter(){
+    public double calcPerimeter(double width, double length){
 
         perimeter = 2 * (width + length);
+        return perimeter;
 
     }
 

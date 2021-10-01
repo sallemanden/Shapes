@@ -2,13 +2,13 @@ public class RectangleTester extends Shape {
     public static void main(String[] args)
     {
         // Testing Circle
-        Rectangle r = new Rectangle(100,200);
+        Rectangle r = new Rectangle(130,200);
 
         // Calculate area of Rectangle
-        r.calcArea();
+        r.calcArea(r.width,r.length);
 
         // Calculate perimeter of Rectangle
-        r.calcPerimeter();
+        r.calcPerimeter(r.width, r.length);
 
         // Print out Shape details
         r.showShape();
